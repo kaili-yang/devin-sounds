@@ -17,14 +17,14 @@ function runHook(payload, env) {
 }
 
 test('hook plans a sound, prints nothing on stdout and exits 0', (t) => {
-  const { env, cleanup } = tmpEnv({ DEVIN_SOUNDS_PACK: 'guofeng' });
+  const { env, cleanup } = tmpEnv({ DEVIN_SOUNDS_PACK: 'royal' });
   t.after(cleanup);
   const r = runHook({ hook_event_name: 'PermissionRequest', tool_name: 'exec', tool_input: { command: 'ls' }, session_id: 's' }, env);
   assert.equal(r.status, 0);
   assert.equal(r.stdout, '', 'a PermissionRequest hook must never print a decision');
   const plan = JSON.parse(r.stderr);
   assert.equal(plan.category, 'input.required');
-  assert.equal(plan.pack, 'guofeng');
+  assert.equal(plan.pack, 'royal');
   assert.equal(plan.source.kind, 'tts');
   assert.equal(plan.fallback.kind, 'synth');
 });
@@ -68,7 +68,7 @@ test('synth sounds render once to the cache', (t) => {
 });
 
 test('tts renders through the engine, falls back to the chime when it fails', (t) => {
-  const { env, cleanup } = tmpEnv({ DEVIN_SOUNDS_PACK: 'dagong' });
+  const { env, cleanup } = tmpEnv({ DEVIN_SOUNDS_PACK: 'intern' });
   t.after(cleanup);
   const plan = planForHook({ hook_event_name: 'Stop' }, { env });
   const calls = [];

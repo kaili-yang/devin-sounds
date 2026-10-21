@@ -12,7 +12,7 @@ test('built-in packs are valid and cover every CESP core category', (t) => {
   const { env, cleanup } = tmpEnv();
   t.after(cleanup);
   const packs = listPacks(env);
-  assert.deepEqual(packs.map((p) => p.name).sort(), ['butler', 'chime', 'dagong', 'guofeng']);
+  assert.deepEqual(packs.map((p) => p.name).sort(), ['butler', 'chime', 'intern', 'royal']);
   for (const p of packs) {
     assert.equal(p.error, undefined, `${p.name}: ${p.error}`);
     for (const cat of CORE) assert.ok(soundsFor(p, cat).length, `${p.name} has no ${cat}`);
@@ -22,7 +22,7 @@ test('built-in packs are valid and cover every CESP core category', (t) => {
 test('pickSound never repeats the previous sound when there is a choice', (t) => {
   const { env, cleanup } = tmpEnv();
   t.after(cleanup);
-  const pack = findPack('dagong', env);
+  const pack = findPack('intern', env);
   let last;
   for (let i = 0; i < 50; i++) {
     const pick = pickSound(pack, 'task.acknowledge', last);
@@ -65,11 +65,11 @@ test('file paths escaping the pack directory are rejected', (t) => {
 test('tts and synth sounds resolve to stable cache paths', (t) => {
   const { env, cleanup } = tmpEnv();
   t.after(cleanup);
-  const pack = findPack('guofeng', env);
+  const pack = findPack('royal', env);
   const s = pack.manifest.categories['task.complete'].sounds[0];
   const a = resolveSound(pack, s, env);
   assert.equal(a.kind, 'tts');
-  assert.ok(a.out.startsWith(path.join(env.DEVIN_SOUNDS_CACHE, 'tts', 'guofeng')));
+  assert.ok(a.out.startsWith(path.join(env.DEVIN_SOUNDS_CACHE, 'tts', 'royal')));
   assert.equal(resolveSound(pack, s, env).out, a.out);
   const chime = findPack('chime', env);
   assert.equal(resolveSound(chime, chime.manifest.categories['task.complete'].sounds[0], env).kind, 'synth');

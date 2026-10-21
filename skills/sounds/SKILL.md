@@ -1,14 +1,14 @@
 ---
 name: sounds
-description: Change Devin's notification sounds — switch voice pack (国风/打工人/butler/chime or any OpenPeon pack), preview, volume, mute, per-event on/off, desktop notifications
+description: Change Devin's notification sounds — switch voice pack (butler/royal/intern/chime or any OpenPeon pack), preview, volume, mute, per-event on/off, desktop notifications
 ---
 
 Translate the user's request into `devin-sounds` commands and run them. Report the output briefly.
 
 ```bash
 node "$DEVIN_PLUGIN_ROOT/bin/cli.js" list                      # packs, * = current
-node "$DEVIN_PLUGIN_ROOT/bin/cli.js" use guofeng               # 国风·宫廷 | dagong 打工人 | butler | chime
-node "$DEVIN_PLUGIN_ROOT/bin/cli.js" preview dagong input.required
+node "$DEVIN_PLUGIN_ROOT/bin/cli.js" use royal                 # butler | royal | intern | chime
+node "$DEVIN_PLUGIN_ROOT/bin/cli.js" preview intern input.required
 node "$DEVIN_PLUGIN_ROOT/bin/cli.js" test                      # play every event of the current pack
 node "$DEVIN_PLUGIN_ROOT/bin/cli.js" search warcraft           # OpenPeon registry, 370+ packs
 node "$DEVIN_PLUGIN_ROOT/bin/cli.js" add peon                  # install from the registry

@@ -28,29 +28,29 @@ test('Windows quotes the path for PowerShell', () => {
 
 test('parses `say -v ?` including names with spaces and parentheses', () => {
   const voices = parseSayVoices([
+    'Samantha            en_US    # Hello! My name is Samantha.',
+    'Grandpa (English (UK)) en_GB    # Hello! My name is Grandpa.',
     'Daniel              en_GB    # Hello! My name is Daniel.',
-    'Grandpa (Chinese (China mainland)) zh_CN    # 你好！我叫Grandpa。',
-    'Tingting            zh_CN    # 你好！我叫婷婷。',
     'garbage line',
   ].join('\n'));
   assert.deepEqual(voices, [
+    { name: 'Samantha', lang: 'en_US' },
+    { name: 'Grandpa (English (UK))', lang: 'en_GB' },
     { name: 'Daniel', lang: 'en_GB' },
-    { name: 'Grandpa (Chinese (China mainland))', lang: 'zh_CN' },
-    { name: 'Tingting', lang: 'zh_CN' },
   ]);
-  assert.equal(chooseVoice(voices, ['Grandpa'], 'zh_CN'), 'Grandpa (Chinese (China mainland))');
-  assert.equal(chooseVoice(voices, ['Nobody', 'Tingting'], 'zh_CN'), 'Tingting');
-  assert.equal(chooseVoice(voices, ['Nobody'], 'zh_CN'), 'Grandpa (Chinese (China mainland))');
-  assert.equal(chooseVoice(voices, ['Daniel'], 'zh_CN'), 'Grandpa (Chinese (China mainland))');
+  assert.equal(chooseVoice(voices, ['Grandpa'], 'en_GB'), 'Grandpa (English (UK))');
+  assert.equal(chooseVoice(voices, ['Nobody', 'Daniel'], 'en_GB'), 'Daniel');
+  assert.equal(chooseVoice(voices, ['Nobody'], 'en_GB'), 'Grandpa (English (UK))');
+  assert.equal(chooseVoice(voices, ['Samantha'], 'en_GB'), 'Grandpa (English (UK))');
   assert.equal(chooseVoice(voices, [], 'fr_FR'), null);
 });
 
 test('ttsCommand uses say on macOS, espeak-ng on Linux, nothing otherwise', () => {
-  const tts = { text: '大人，活干完了。', lang: 'zh_CN', voices: ['Tingting'] };
-  const mac = ttsCommand(tts, '/c/x', { platform: 'darwin', sayVoices: [{ name: 'Tingting', lang: 'zh_CN' }] });
-  assert.deepEqual(mac, { argv: ['say', ['-v', 'Tingting', '-o', '/c/x.aiff', '--', tts.text]], out: '/c/x.aiff' });
+  const tts = { text: 'Done, boss!', lang: 'en_US', voices: ['Samantha'] };
+  const mac = ttsCommand(tts, '/c/x', { platform: 'darwin', sayVoices: [{ name: 'Samantha', lang: 'en_US' }] });
+  assert.deepEqual(mac, { argv: ['say', ['-v', 'Samantha', '-o', '/c/x.aiff', '--', tts.text]], out: '/c/x.aiff' });
   const linux = ttsCommand(tts, '/c/x', { platform: 'linux', has: hasOnly('espeak-ng') });
-  assert.deepEqual(linux.argv, ['espeak-ng', ['-v', 'cmn', '-w', '/c/x.wav', tts.text]]);
+  assert.deepEqual(linux.argv, ['espeak-ng', ['-v', 'en', '-w', '/c/x.wav', tts.text]]);
   assert.equal(ttsCommand(tts, '/c/x', { platform: 'linux', has: hasOnly() }), null);
 });
 

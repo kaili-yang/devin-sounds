@@ -1,7 +1,7 @@
 {
   "name": "devin-sounds",
   "version": "0.1.0",
-  "description": "Voice lines and chimes when Devin finishes, needs your approval, or hits an error. Chinese and English packs built in; plays any of the 370+ OpenPeon (peon-ping) sound packs.",
+  "description": "Voice lines and chimes when Devin finishes, needs your approval, or hits an error. Four voice packs built in; plays any of the 370+ OpenPeon (peon-ping) sound packs.",
   "author": { "name": "Kelly Yang" },
   "license": "MIT",
   "homepage": "https://github.com/kaili-yang/devin-sounds",
