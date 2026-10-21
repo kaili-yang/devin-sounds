@@ -14,7 +14,7 @@ test('withOurHooks adds one entry per event and keeps other hooks', () => {
   assert.deepEqual(Object.keys(out).sort(), [...new Set([...EVENTS, 'Custom'])].sort());
   assert.equal(out.Stop.length, 2);
   assert.deepEqual(out.Stop[0], other);
-  assert.match(out.Stop[1].hooks[0].command, new RegExp(`^${MARKER} node "/plug/bin/hook.js"$`));
+  assert.match(out.Stop[1].hooks[0].command, new RegExp(`^${MARKER} ".+node(\\.exe)?" "/plug/bin/hook.js"$`));
   assert.deepEqual(withOurHooks(out, '/plug'), out, 'idempotent');
   assert.deepEqual(withOurHooks(out, null), { Stop: [other], Custom: 'weird' }, 'uninstall removes only ours');
 });
