@@ -1,0 +1,15 @@
+{
+  "name": "devin-sounds",
+  "version": "0.1.0",
+  "description": "Voice lines and chimes for Devin: hear when it finishes, needs approval, or fails. Chinese/English packs built in, plays any OpenPeon (peon-ping) pack. Zero dependencies.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/kaili-yang/devin-sounds.git" },
+  "homepage": "https://github.com/kaili-yang/devin-sounds#readme",
+  "engines": { "node": ">=18" },
+  "bin": { "devin-sounds": "bin/cli.js" },
+  "files": ["bin", "lib", "packs", "skills", "hooks.json", ".devin-plugin"],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": ["devin", "plugin", "hooks", "sounds", "notifications", "openpeon", "cesp", "peon-ping"]
+}

@@ -1,0 +1,36 @@
+{
+  "cesp_version": "1.0",
+  "name": "chime",
+  "display_name": "Chime",
+  "version": "0.1.0",
+  "description": "Wordless bell chimes, synthesized on this machine. Works everywhere, no TTS needed.",
+  "author": { "name": "Kelly Yang", "github": "kaili-yang" },
+  "license": "MIT",
+  "language": "none",
+  "categories": {
+    "session.start": { "sounds": [
+      { "label": "Ready", "synth": { "notes": [{ "n": "C5", "ms": 110 }, { "n": "E5", "ms": 110 }, { "n": "G5", "ms": 260 }] } }
+    ] },
+    "task.acknowledge": { "sounds": [
+      { "label": "OK", "synth": { "notes": [{ "n": "G5", "ms": 140, "gain": 0.35 }] } }
+    ] },
+    "task.complete": { "sounds": [
+      { "label": "Done", "synth": { "notes": [{ "n": "C5", "ms": 100 }, { "n": "E5", "ms": 100 }, { "n": "G5", "ms": 100 }, { "n": "C6", "ms": 420 }] } }
+    ] },
+    "input.required": { "sounds": [
+      { "label": "Needs your approval", "synth": { "notes": [{ "n": "A5", "ms": 180 }, { "n": "rest", "ms": 60 }, { "n": "A5", "ms": 320 }] } }
+    ] },
+    "task.error": { "sounds": [
+      { "label": "Error", "synth": { "notes": [{ "n": "E4", "ms": 160 }, { "n": "C4", "ms": 380 }] } }
+    ] },
+    "resource.limit": { "sounds": [
+      { "label": "Limit", "synth": { "notes": [{ "n": "D4", "ms": 140, "gain": 0.4 }, { "n": "D4", "ms": 140, "gain": 0.4 }, { "n": "D4", "ms": 300, "gain": 0.4 }] } }
+    ] },
+    "user.spam": { "sounds": [
+      { "label": "Easy", "synth": { "notes": [{ "n": "B5", "ms": 60, "gain": 0.3 }, { "n": "B5", "ms": 60, "gain": 0.3 }, { "n": "B5", "ms": 60, "gain": 0.3 }] } }
+    ] },
+    "session.end": { "sounds": [
+      { "label": "Bye", "synth": { "notes": [{ "n": "G5", "ms": 110 }, { "n": "E5", "ms": 110 }, { "n": "C5", "ms": 300 }] } }
+    ] }
+  }
+}

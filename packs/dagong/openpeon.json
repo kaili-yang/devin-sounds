@@ -1,0 +1,42 @@
+{
+  "cesp_version": "1.0",
+  "name": "dagong",
+  "display_name": "打工人",
+  "version": "0.1.0",
+  "description": "打工人语录：Devin 是打工人，你是老板。语音由本机 TTS 生成。",
+  "author": { "name": "Kelly Yang", "github": "kaili-yang" },
+  "license": "MIT",
+  "language": "zh-CN",
+  "categories": {
+    "session.start": { "sounds": [
+      { "label": "打工人，打工魂，上班了", "tts": { "text": "打工人，打工魂，上班了！", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } },
+      { "label": "老板早", "tts": { "text": "老板早！今天干点啥？", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] },
+    "task.acknowledge": { "sounds": [
+      { "label": "收到收到", "tts": { "text": "收到收到！", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } },
+      { "label": "好的老板", "tts": { "text": "好的老板！", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } },
+      { "label": "马上安排", "tts": { "text": "马上安排。", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] },
+    "task.complete": { "sounds": [
+      { "label": "老板，搞定了", "tts": { "text": "老板，搞定了！", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } },
+      { "label": "活干完了，可以摸鱼了", "tts": { "text": "活干完了，可以摸鱼了。", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] },
+    "input.required": { "sounds": [
+      { "label": "老板，这个得你拍板", "tts": { "text": "老板，这个得你拍板。", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } },
+      { "label": "需要你审批一下", "tts": { "text": "老板，需要你审批一下。", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] },
+    "task.error": { "sounds": [
+      { "label": "翻车了老板", "tts": { "text": "翻车了，老板。", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } },
+      { "label": "报错了，我再试试", "tts": { "text": "报错了，我再试试。", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] },
+    "resource.limit": { "sounds": [
+      { "label": "上下文满了，省着点用", "tts": { "text": "上下文满了，省着点用。", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] },
+    "user.spam": { "sounds": [
+      { "label": "别催了别催了，在做了", "tts": { "text": "别催了别催了，在做了！", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] },
+    "session.end": { "sounds": [
+      { "label": "下班了下班了", "tts": { "text": "下班了，下班了！", "lang": "zh_CN", "voices": ["Tingting", "Flo", "Sandy"] } }
+    ] }
+  }
+}
