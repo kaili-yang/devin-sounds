@@ -1,0 +1,146 @@
+[
+  {
+    "name": "butler",
+    "display": "The Butler",
+    "items": [
+      {
+        "cat": "session.start",
+        "when": "Session starts",
+        "label": "At your service.",
+        "file": "butler-session-start.mp3"
+      },
+      {
+        "cat": "task.acknowledge",
+        "when": "You send a prompt",
+        "label": "Right away.",
+        "file": "butler-task-acknowledge.mp3"
+      },
+      {
+        "cat": "input.required",
+        "when": "Devin needs your approval",
+        "label": "Your approval is required.",
+        "file": "butler-input-required.mp3"
+      },
+      {
+        "cat": "task.error",
+        "when": "A tool fails",
+        "label": "I'm afraid something went wrong.",
+        "file": "butler-task-error.mp3"
+      },
+      {
+        "cat": "task.complete",
+        "when": "Devin finishes",
+        "label": "The task is complete.",
+        "file": "butler-task-complete.mp3"
+      }
+    ]
+  },
+  {
+    "name": "royal",
+    "display": "The Royal Court",
+    "items": [
+      {
+        "cat": "session.start",
+        "when": "Session starts",
+        "label": "Your humble servant awaits.",
+        "file": "royal-session-start.mp3"
+      },
+      {
+        "cat": "task.acknowledge",
+        "when": "You send a prompt",
+        "label": "As you command.",
+        "file": "royal-task-acknowledge.mp3"
+      },
+      {
+        "cat": "input.required",
+        "when": "Devin needs your approval",
+        "label": "This matter awaits your royal decree.",
+        "file": "royal-input-required.mp3"
+      },
+      {
+        "cat": "task.error",
+        "when": "A tool fails",
+        "label": "Forgive me, Your Majesty. Something went wrong.",
+        "file": "royal-task-error.mp3"
+      },
+      {
+        "cat": "task.complete",
+        "when": "Devin finishes",
+        "label": "Your Majesty, the deed is done.",
+        "file": "royal-task-complete.mp3"
+      }
+    ]
+  },
+  {
+    "name": "intern",
+    "display": "The Eager Intern",
+    "items": [
+      {
+        "cat": "session.start",
+        "when": "Session starts",
+        "label": "Morning, boss! Coffee's on, let's ship.",
+        "file": "intern-session-start.mp3"
+      },
+      {
+        "cat": "task.acknowledge",
+        "when": "You send a prompt",
+        "label": "On it, boss!",
+        "file": "intern-task-acknowledge.mp3"
+      },
+      {
+        "cat": "input.required",
+        "when": "Devin needs your approval",
+        "label": "Boss, I need your sign-off on this one.",
+        "file": "intern-input-required.mp3"
+      },
+      {
+        "cat": "task.error",
+        "when": "A tool fails",
+        "label": "Uh oh. I broke something.",
+        "file": "intern-task-error.mp3"
+      },
+      {
+        "cat": "task.complete",
+        "when": "Devin finishes",
+        "label": "Done, boss!",
+        "file": "intern-task-complete.mp3"
+      }
+    ]
+  },
+  {
+    "name": "chime",
+    "display": "Chime",
+    "items": [
+      {
+        "cat": "session.start",
+        "when": "Session starts",
+        "label": "Ready",
+        "file": "chime-session-start.mp3"
+      },
+      {
+        "cat": "task.acknowledge",
+        "when": "You send a prompt",
+        "label": "OK",
+        "file": "chime-task-acknowledge.mp3"
+      },
+      {
+        "cat": "input.required",
+        "when": "Devin needs your approval",
+        "label": "Needs your approval",
+        "file": "chime-input-required.mp3"
+      },
+      {
+        "cat": "task.error",
+        "when": "A tool fails",
+        "label": "Error",
+        "file": "chime-task-error.mp3"
+      },
+      {
+        "cat": "task.complete",
+        "when": "Devin finishes",
+        "label": "Done",
+        "file": "chime-task-complete.mp3"
+      }
+    ]
+  }
+]

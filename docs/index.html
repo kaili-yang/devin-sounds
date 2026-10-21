@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>devin-sounds · samples</title>
+<style>
+  body{margin:0;background:#0f0d1a;color:#ece9ff;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  main{max-width:880px;margin:0 auto;padding:40px 20px 60px}
+  h1{margin:0 0 6px;font-size:28px} p.sub{color:#9a94bf;margin:0 0 28px}
+  code{background:#221f36;padding:2px 6px;border-radius:6px}
+  section{background:#1a1730;border:1px solid #2e2a47;border-radius:16px;padding:18px 20px;margin-bottom:18px}
+  h2{margin:0 0 12px;font-size:18px} h2 small{color:#9a94bf;font-weight:500;margin-left:8px}
+  .row{display:grid;grid-template-columns:200px 1fr 260px;gap:12px;align-items:center;padding:8px 0;border-top:1px solid #26223d}
+  .row:first-of-type{border-top:0} .when{color:#9a94bf;font-size:13px} .line{font-weight:600}
+  audio{width:100%;height:34px}
+  @media (max-width:700px){.row{grid-template-columns:1fr}}
+</style></head>
+<body><main>
+<h1>devin-sounds</h1>
+<p class="sub">What Devin sounds like with each built-in pack. Install: <code>devin plugins install kaili-yang/devin-sounds</code> ·
+<a href="https://github.com/kaili-yang/devin-sounds" style="color:#2ee6c5">GitHub</a></p>
+<section><h2><code>butler</code><small>The Butler</small></h2>
+<div class="row"><div class="when">Session starts</div><div class="line">At your service.</div><audio controls preload="none" src="samples/butler-session-start.mp3"></audio></div>
+<div class="row"><div class="when">You send a prompt</div><div class="line">Right away.</div><audio controls preload="none" src="samples/butler-task-acknowledge.mp3"></audio></div>
+<div class="row"><div class="when">Devin needs your approval</div><div class="line">Your approval is required.</div><audio controls preload="none" src="samples/butler-input-required.mp3"></audio></div>
+<div class="row"><div class="when">A tool fails</div><div class="line">I'm afraid something went wrong.</div><audio controls preload="none" src="samples/butler-task-error.mp3"></audio></div>
+<div class="row"><div class="when">Devin finishes</div><div class="line">The task is complete.</div><audio controls preload="none" src="samples/butler-task-complete.mp3"></audio></div>
+</section>
+<section><h2><code>royal</code><small>The Royal Court</small></h2>
+<div class="row"><div class="when">Session starts</div><div class="line">Your humble servant awaits.</div><audio controls preload="none" src="samples/royal-session-start.mp3"></audio></div>
+<div class="row"><div class="when">You send a prompt</div><div class="line">As you command.</div><audio controls preload="none" src="samples/royal-task-acknowledge.mp3"></audio></div>
+<div class="row"><div class="when">Devin needs your approval</div><div class="line">This matter awaits your royal decree.</div><audio controls preload="none" src="samples/royal-input-required.mp3"></audio></div>
+<div class="row"><div class="when">A tool fails</div><div class="line">Forgive me, Your Majesty. Something went wrong.</div><audio controls preload="none" src="samples/royal-task-error.mp3"></audio></div>
+<div class="row"><div class="when">Devin finishes</div><div class="line">Your Majesty, the deed is done.</div><audio controls preload="none" src="samples/royal-task-complete.mp3"></audio></div>
+</section>
+<section><h2><code>intern</code><small>The Eager Intern</small></h2>
+<div class="row"><div class="when">Session starts</div><div class="line">Morning, boss! Coffee's on, let's ship.</div><audio controls preload="none" src="samples/intern-session-start.mp3"></audio></div>
+<div class="row"><div class="when">You send a prompt</div><div class="line">On it, boss!</div><audio controls preload="none" src="samples/intern-task-acknowledge.mp3"></audio></div>
+<div class="row"><div class="when">Devin needs your approval</div><div class="line">Boss, I need your sign-off on this one.</div><audio controls preload="none" src="samples/intern-input-required.mp3"></audio></div>
+<div class="row"><div class="when">A tool fails</div><div class="line">Uh oh. I broke something.</div><audio controls preload="none" src="samples/intern-task-error.mp3"></audio></div>
+<div class="row"><div class="when">Devin finishes</div><div class="line">Done, boss!</div><audio controls preload="none" src="samples/intern-task-complete.mp3"></audio></div>
+</section>
+<section><h2><code>chime</code><small>Chime</small></h2>
+<div class="row"><div class="when">Session starts</div><div class="line">Ready</div><audio controls preload="none" src="samples/chime-session-start.mp3"></audio></div>
+<div class="row"><div class="when">You send a prompt</div><div class="line">OK</div><audio controls preload="none" src="samples/chime-task-acknowledge.mp3"></audio></div>
+<div class="row"><div class="when">Devin needs your approval</div><div class="line">Needs your approval</div><audio controls preload="none" src="samples/chime-input-required.mp3"></audio></div>
+<div class="row"><div class="when">A tool fails</div><div class="line">Error</div><audio controls preload="none" src="samples/chime-task-error.mp3"></audio></div>
+<div class="row"><div class="when">Devin finishes</div><div class="line">Done</div><audio controls preload="none" src="samples/chime-task-complete.mp3"></audio></div>
+</section>
+<p class="sub">Voice packs are spoken by the listener's own text-to-speech at runtime; these recordings were made with macOS <code>say</code>.</p>
+</main></body></html>

@@ -6,6 +6,24 @@
 > Your Majesty, the deed is done. — `royal`
 > Pardon me. Your approval is required. — `butler`
 
+### Listen
+
+**[▶ Play all samples in your browser](https://kaili-yang.github.io/devin-sounds/)** (GitHub does not play audio
+inside a README, so the samples live on the project page). Or click a line below to play it:
+
+| When | `butler` (default) | `royal` | `intern` | `chime` |
+|---|---|---|---|---|
+| Session starts | [At your service.](https://kaili-yang.github.io/devin-sounds/samples/butler-session-start.mp3) | [Your humble servant awaits.](https://kaili-yang.github.io/devin-sounds/samples/royal-session-start.mp3) | [Morning, boss! Coffee's on, let's ship.](https://kaili-yang.github.io/devin-sounds/samples/intern-session-start.mp3) | [ready](https://kaili-yang.github.io/devin-sounds/samples/chime-session-start.mp3) |
+| You send a prompt | [Right away.](https://kaili-yang.github.io/devin-sounds/samples/butler-task-acknowledge.mp3) | [As you command.](https://kaili-yang.github.io/devin-sounds/samples/royal-task-acknowledge.mp3) | [On it, boss!](https://kaili-yang.github.io/devin-sounds/samples/intern-task-acknowledge.mp3) | [ok](https://kaili-yang.github.io/devin-sounds/samples/chime-task-acknowledge.mp3) |
+| Devin needs your approval | [Your approval is required.](https://kaili-yang.github.io/devin-sounds/samples/butler-input-required.mp3) | [This matter awaits your royal decree.](https://kaili-yang.github.io/devin-sounds/samples/royal-input-required.mp3) | [Boss, I need your sign-off on this one.](https://kaili-yang.github.io/devin-sounds/samples/intern-input-required.mp3) | [ding-ding](https://kaili-yang.github.io/devin-sounds/samples/chime-input-required.mp3) |
+| A tool fails | [I'm afraid something went wrong.](https://kaili-yang.github.io/devin-sounds/samples/butler-task-error.mp3) | [Forgive me, Your Majesty. Something went wrong.](https://kaili-yang.github.io/devin-sounds/samples/royal-task-error.mp3) | [Uh oh. I broke something.](https://kaili-yang.github.io/devin-sounds/samples/intern-task-error.mp3) | [error](https://kaili-yang.github.io/devin-sounds/samples/chime-task-error.mp3) |
+| Devin finishes | [The task is complete.](https://kaili-yang.github.io/devin-sounds/samples/butler-task-complete.mp3) | [Your Majesty, the deed is done.](https://kaili-yang.github.io/devin-sounds/samples/royal-task-complete.mp3) | [Done, boss!](https://kaili-yang.github.io/devin-sounds/samples/intern-task-complete.mp3) | [done](https://kaili-yang.github.io/devin-sounds/samples/chime-task-complete.mp3) |
+
+The recordings were made with macOS `say`; on your machine the voice packs are spoken by your own text-to-speech
+(regenerate them with `node scripts/render-samples.js`).
+
+## What it is
+
 A Devin plugin that plays voice lines and chimes on Devin lifecycle events, so you can tab away and still know the
 moment Devin finishes, needs your approval, or hits an error. Four packs are built in, and it plays
 any of the **370+ community packs** in the [OpenPeon](https://github.com/PeonPing/openpeon) registry (the
